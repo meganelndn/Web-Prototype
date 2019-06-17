@@ -1,0 +1,344 @@
+* {box-sizing: border-box;}
+
+body {
+  font-family: "Helvetica Neue LT Std.";
+  background-color: white;
+  margin: 0 auto;
+}
+h1 {
+  color: white;
+  font-size: 30px;
+}
+h2 {
+  font-size: 22px;
+  color: white;
+}
+p {
+  color: white;
+  text-align: center;
+}
+
+
+
+/********** HEADER & FOOTER *********/
+.header{
+  grid-area: header;
+  background-color: #25282A;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.header a {
+  float: right;
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0;
+}
+
+.header img {
+  float: left;
+}
+
+.header a:hover {
+  background-color: red;
+  color: white;
+}
+
+.header a.active {
+  background-color: red;
+  color: white;
+  float: right;
+  padding: 42px;
+  display: flex;
+  z-index: 10;
+}
+
+.header-right {
+  float: right;
+  margin: 0;
+  display: flex;
+  display: block;
+  margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+.fronter {
+  position: relative;
+  float: left;
+  padding-right: 910px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+footer{
+  grid-area: footer;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #25282A;
+}
+
+footer img {
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+
+/********* CONTACT CONTAINER *********/
+#btn {
+  background-color: rgb(255, 180, 170);
+  box-shadow: 0 7px 8px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  font-size: 50px;
+  float: left;
+  width: 100%;
+  padding: 150px;
+  justify-content: center;
+}
+#btn:hover {
+  background-color: lightgrey;
+  color: black;
+}
+.login {
+  padding: 10%;
+  text-align: left;
+  background-color: lightpink;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  height: 0;
+  background-color: rgb(255, 180, 170);
+}
+section {
+  perspective: 1000px;
+  perspective-origin: top;
+}
+#loginform {
+  padding: 30px 0;
+  text-align: center;
+}
+#loginform p {
+  padding-bottom: 40px;
+}
+.login-btn {
+  margin-top: 1.5em;
+  display: inline-block;
+  width: auto;
+  background-color: rgb(255, 180, 170);;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border: 1px solid white;
+}
+.login-btn:hover {
+  background-color: white;
+  color: black;
+}
+.hide {
+  display: none;
+}
+.show {
+  animation: open .65s forwards;
+  display: block;
+  height: auto;
+}
+@keyframes open {
+  50% {
+    transform: rotateX(30deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+input, label{
+    display: block;
+    text-align: center;
+}
+label {
+  color: white;
+}
+
+
+
+/********** HOME PAGE **********/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header header"
+    "current calendar"
+    "modules newsfeed"
+    "contact contact"
+    "footer footer";
+}
+#current-project {
+  grid-area: current;
+  background: #CDD2BA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: 22px;
+  font-weight: bold;
+  border: 3px solid white;
+}
+#calendar {
+  grid-area: calendar;
+  background: #EDD6C4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-size: 22px;
+  font-weight: bold;
+  border: 3px solid white;
+}
+#newsfeed {
+  grid-area: newsfeed;
+  background: #C7D7C9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-weight: bold;
+  border: 3px solid white;
+}
+#modules {
+  grid-area: modules;
+  background: #EDD6C4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  font-weight: bold;
+  border: 3px solid white;
+}
+#contact {
+  grid-area: contact;
+  background: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+  font-weight: bold;
+  border: 3px solid white;
+}
+
+
+
+/********** CURRENT PROJECT ***********/
+.one, .two, .three, .four, .five, .six {
+  border-radius: 30px;
+  padding: 10px;
+  margin: 1em;
+  display: flex;
+  width: 25vw;
+  background-color: rgb(255, 180, 170);
+  width: 25%;
+}
+.five {
+  text-decoration: underline;
+  color: white;
+}
+.one {
+  text-align: center;
+  justify-content: center;
+  width: 30%;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  padding: 20px;
+}
+#list {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.one img,
+.two img,
+.three img,
+.four img,
+.five img,
+.six img {
+  border: solid 1px white;
+  position: relative;
+  border-radius: 50%;
+  float: right;
+  justify-content: right;
+  align-items: center;
+}
+
+
+/********** REQUIREMENTS ***********/
+.requirements {
+  border-radius: 30px;
+  padding: 10px;
+  padding-bottom: 100px;
+  margin: 1em;
+  display: flex;
+  width: 25vw;
+  background-color: rgb(255, 180, 170);
+  color: white;
+  text-align: left;
+  float: right;
+}
+
+
+/********** MEDIA QUERIES **********/
+@media all and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "current"
+    "calendar"
+    "newsfeed"
+    "modules"
+    "contact"
+    "footer";
+  }
+}
+
+@media all and (max-width: 600px) {
+  .one, .two, .three, .four, .five, .six {
+  width: 60%;
+  }
+  .one {
+  width: 70%;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .one, .two, .three, .four, .five, .six {
+  width: 60%;
+  }
+  .one {
+  width: 70%;
+  }
+}
