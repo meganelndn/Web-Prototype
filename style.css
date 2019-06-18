@@ -258,6 +258,7 @@ label {
   width: 25vw;
   background-color: rgb(255, 180, 170);
   width: 25%;
+  justify-content: space-around;
 }
 .five {
   text-decoration: underline;
@@ -287,7 +288,7 @@ label {
   position: relative;
   border-radius: 50%;
   float: right;
-  justify-content: right;
+  justify-content: space-around;
   align-items: center;
 }
 
