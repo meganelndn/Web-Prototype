@@ -346,9 +346,11 @@ label {
     float: right;
     display: block;
   }
+}
 
 @media all and (max-width: 850px) {
   .header-right {
     float: right;
     display: block;
   }
+}
